@@ -1,0 +1,22 @@
+READ ME:
+-----------------
+Transfer File contents:
+Move contents of desired file into a temporary file to read from later
+O(n).
+
+Tokenizing words from temporary file:
+Read through the aggrigated file and tokenize words.
+O(n).
+
+Use these tokens to load avl tree:
+Every token is given a frequency which is stored as a WordOccurrance struct. 
+These WordOccurrances are loaded into an avl tree.
+O(log n).
+
+Building a Huffman tree & generating codes:
+Once the avl tree is fully loaded with words and their frequencies, remove the root of the tree (O(1)) and add it to a Huffman tree.
+Uses a min heap implementation.
+O(n log n).
+
+NOTE: Was not able to fully complete assignment on time: Compression and Decompression not implemented.
+-- Errors occur when filecompressor tries to compress itself. If this occurs a file called write_temp.txt will remain. If this is the case, this must be deleted before trying to run it again properly.
